@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Custom CSS -->
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+
+        <div class="row">
+            <div class="col-12 d-flex" style="height:200px;background-color:blue;color:#fff;">
+                <h1 class="text-center" style="margin: auto auto;">New York Times Search <i class="far fa-newspaper"></i></h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Search Term</label>
+                        <input type="text" class="form-control" id="search-term">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Number of Records to Retrieve</label>
+                        <input type="number" class="form-control" id="num-records">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Start Year (Optional)</label>
+                        <input type="number" class="form-control" id="start-year">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">End Year (Optional)</label>
+                        <input type="number" class="form-control" id="end-year">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Clear</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" id="top-articles">
+               
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
