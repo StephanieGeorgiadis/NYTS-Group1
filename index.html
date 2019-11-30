@@ -18,42 +18,60 @@
     <div class="container">
         <!-- Header -->
 
-        <div class="row">
-            <div class="col-12 d-flex" style="height:200px;background-color:blue;color:#fff;">
-                <h1 class="text-center" style="margin: auto auto;">New York Times Search <i class="far fa-newspaper"></i></h1>
+        <div class="jumbotron" style="height:200px;background-color:#21325a;color:#fff;">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <h1 class="text-center" style="margin: auto auto;">New York Times Search <i class="far fa-newspaper"></i></h1>
+                </div>
             </div>
         </div>
 
+       
 
-        <div class="row">
-            <div class="col-12">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Search Term</label>
-                        <input type="text" class="form-control" id="search-term">
+        <div class="card mt-4">
+            <div class="card-header">Search Parameters</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <form id="search-form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Search Term</label>
+                                <input type="text" class="form-control" id="search-term">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Number of Records to Retrieve</label>
+                                <select class="form-control" id="num-records">
+                                    <option>1</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Start Year (Optional)</label>
+                                <input type="number" class="form-control" id="start-year">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">End Year (Optional)</label>
+                                <input type="number" class="form-control" id="end-year">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit-button"><i class="fas fa-search"></i> Submit</button>
+                            <button type="reset" class="btn btn-primary" id="clear-button"><i class="fas fa-trash-alt"></i> Clear</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Number of Records to Retrieve</label>
-                        <input type="number" class="form-control" id="num-records">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Start Year (Optional)</label>
-                        <input type="number" class="form-control" id="start-year">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">End Year (Optional)</label>
-                        <input type="number" class="form-control" id="end-year">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
-                    <button type="submit" class="btn btn-primary" id="clear-button">Clear</button>
-
-                </form>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12" id="top-articles">
-               grg
+        <div class="card mt-4">
+            <div class="card-header"><i class="far fa-calendar-alt"></i> Top Articles</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12" id="top-articles">
+                        <ul class="list-group">
+                            <!-- <li class="list-group-item">Article here</li> -->
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
