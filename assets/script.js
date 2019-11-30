@@ -18,13 +18,18 @@ console.log("jhjhjhjhjhjh");
 $("#search-form").on("submit", function () {
 
     event.preventDefault();
-    console.log(queryUrl, "url");
+    // console.log(queryUrl, "url");
     query = $("#search-term").val();
 
+    if (query==""){
+        alert("Please enter no of records");
+    }
 
     numRecords = $("#num-records").val();
     numRecords = parseInt(numRecords);
-    console.log(numRecords);
+
+    
+    // console.log(numRecords);
 
     queryUrl = mainUrl + "?q=" + query + "&api-key=" + apiKey + begin_date + end_date;
 
@@ -32,7 +37,7 @@ $("#search-form").on("submit", function () {
         url: queryUrl,
         method: "GET"
     }).then(function (response) {
-        console.log(response.response.docs);
+        // console.log(response.response.docs);
 
         for (var i = 0; i < numRecords; i++) {
             var doc = response.response.docs[i];
